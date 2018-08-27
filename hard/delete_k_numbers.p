@@ -1,43 +1,46 @@
 program delete_k_numbers;
-var v: array[1..6] of integer;
-    i, j, n, k, x,w: integer;
+var v: array[1..10] of integer;
+    i, k, j, n, w, l: integer;
     begin
-        n:= length(v);
+    n:= length(v);
         for i:= 1 to n do
-        begin
-            v[i]:=i;
+        begin 
+            v[i]:= i;
         end;
-        write('inserisci ogni quanto uccidere una persona');
-        readln(x);
-        j:= 1;
-        i:= 1;
+        write('inserisci il numero della conta');
+        readln(k);
+        i:=1;
+        j:=1;
         while n>1 do
         begin
-            if(i=x)then
+            if i=k then
             begin
-                k:= j+1;
-                while k<=n do
+                for w:= j+1 to n do
                 begin
-                    v[k-1]:= v[k];
-                    k:= k+1;
+                    v[w-1]:= v[w];
                 end;
-                for w:= 1 to n do
-                begin
-                    write(v[w],' ');
-                end;
-                writeln('');
-                n:= n-1;
-                i:= 1;
+            i:= 1;
+            n:= n-1;
+            if j>n then
+            begin
+                j:=1;
+            end;
+            for l:= 1 to n do
+            begin 
+                write(v[l],' ');
+            end;
+            writeln(' ');
+
             end
-            else 
+            else
             begin
-                j:= j+1;
                 i:= i+1;
-                if(j>n) then
+                j:= j+1;
+                if j>n then
                 begin
                     j:=1;
                 end;
             end;
         end;
-        writeln('si salva la persona numero: ',v[1] );
+    writeln('sopravvive il numero: ',v[n]);
     end.
