@@ -35,6 +35,3 @@ int main (){
     cout<< "il costo iniziale e': "<<somma<<endl;
     cout<< " il costo scontato e': "<<(somma/100)*(100-sconto);
 }
-
-victor.dutca
-Alpha.123
