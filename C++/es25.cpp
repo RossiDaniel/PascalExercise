@@ -105,6 +105,6 @@ int main ()
 {
 generate();
 char* carta=random_choice();
-cout<<prelievo_percentuale(100000,1,100);
+cout<<prelievo_percentuale(1000,1,100);
 }
 
